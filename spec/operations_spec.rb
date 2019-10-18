@@ -3,36 +3,36 @@ describe "Operations" do
   let(:file_contents) { File.read(File.join(File.dirname(__FILE__), '..', 'lib/operations.rb')) }
 
   describe "#unsafe?" do
-    it 'returns true if speed is greater than 60' do
+    it 'returns "Drive better!" if speed is greater than 60 using an if/else statement' do
       answer = unsafe?(79)
-      expect(answer).to eq(true)
+      expect(answer).to eq("Drive better!")
     end
 
-    it 'returns true if speed is less than 40' do
+    it 'returns "Drive better!" if speed is less than 40 using an if/else statement' do
       answer = unsafe?(35)
-      expect(answer).to eq(true)
+      expect(answer).to eq("Drive better!")
     end
 
-    it 'returns false if the speed is between 40 and 60' do
+    it 'returns "Great driving!" if the speed is between 40 and 60' do
       answer = unsafe?(50)
-      expect(answer).to eq(false)
+      expect(answer).to eq("Great driving!")
     end
   end
 
   describe "#not_safe?" do
-    it 'returns true if speed is greater than 60' do
+    it 'returns "Drive better!" if speed is greater than 60' do
       answer = not_safe?(79)
-      expect(answer).to eq(true)
+      expect(answer).to eq("Drive better!")
     end
 
-    it 'returns true if speed is less than 40' do
+    it 'returns "Drive better!" if speed is less than 40' do
       answer = not_safe?(35)
-      expect(answer).to eq(true)
+      expect(answer).to eq("Drive better!")
     end
 
-    it 'returns false if the speed is between 40 and 60' do
+    it 'returns "Great driving!" if the speed is between 40 and 60' do
       answer = not_safe?(50)
-      expect(answer).to eq(false)
+      expect(answer).to eq("Great driving!")
     end
 
     it 'uses the ternary operator' do
